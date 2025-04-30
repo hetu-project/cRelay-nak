@@ -280,7 +280,8 @@ replace github.com/fiatjaf/eventstore => github.com/d5c5ceb0/eventstore v0.16.5
 
 replace github.com/btcsuite/btcd => github.com/btcsuite/btcd v0.22.1
 
-replace github.com/maoaixiao1314/orbitdb => github.com/maoaixiao1314/orbitdb v1.1.1
+// replace github.com/maoaixiao1314/orbitdb => github.com/hetu-project/cRelay-crdt-db v1.0.2
+replace github.com/maoaixiao1314/orbitdb => ../cRelay-crdt-db
 
 // replace github.com/lucas-clemente/quic-go => github.com/lucas-clemente/quic-go v0.37.0
 replace go.opentelemetry.io/otel => go.opentelemetry.io/otel v1.35.0

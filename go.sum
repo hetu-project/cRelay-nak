@@ -565,8 +565,6 @@ github.com/mailru/easyjson v0.9.0 h1:PrnmzHw7262yW8sTBwxi1PdJA3Iw/EKBa8psRf7d9a4
 github.com/mailru/easyjson v0.9.0/go.mod h1:1+xMtQp2MRNVL/V1bOzuP3aP8VNwRW55fQUto+XFtTU=
 github.com/maoaixiao1314/go-orbit v1.25.0 h1:g8hpuAdnLRZ5PqZPmTm+Nyi0gIufbjUWg4d6jS+/4ms=
 github.com/maoaixiao1314/go-orbit v1.25.0/go.mod h1:Z/DpHf3s/rEfWzmnDfddAdaHxWtmuWgkluIo+/uIX+c=
-github.com/maoaixiao1314/orbitdb v1.1.1 h1:+6M0C9aNj+UJg8eTzqPZtlxYpWndDJSru3Q8HVamQcA=
-github.com/maoaixiao1314/orbitdb v1.1.1/go.mod h1:SwsQj5E0yX1RslbuQHHTy9/xbCjOk06pOIRGSGuTUkI=
 github.com/mark3labs/mcp-go v0.8.3 h1:IzlyN8BaP4YwUMUDqxOGJhGdZXEDQiAPX43dNPgnzrg=
 github.com/mark3labs/mcp-go v0.8.3/go.mod h1:cjMlBU0cv/cj9kjlgmRhoJ5JREdS7YX83xeIG9Ko/jE=
 github.com/markusmobius/go-dateparser v1.2.3 h1:TvrsIvr5uk+3v6poDjaicnAFJ5IgtFHgLiuMY2Eb7Nw=
