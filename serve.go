@@ -82,6 +82,7 @@ var serve = &cli.Command{
 		rl.QueryEvents = append(rl.QueryEvents, adapter.QueryEvents)
 		// rl.CountEvents = append(rl.CountEvents, db.(eventstore.Counter).CountEvents)
 		rl.DeleteEvent = append(rl.DeleteEvent, adapter.DeleteEvent)
+		rl.ReplaceEvent = append(rl.ReplaceEvent, adapter.ReplaceEvent)
 		rl.StoreEvent = append(rl.StoreEvent, adapter.SaveEvent)
 
 		started := make(chan bool)
