@@ -42,6 +42,11 @@ var serve = &cli.Command{
 			Usage:       "file containing the initial batch of events that will be served by the relay as newline-separated JSON (jsonl)",
 			DefaultText: "the relay will start empty",
 		},
+		&cli.StringFlag{
+			Name:  "db-name",
+			Usage: "OrbitDB database name to use",
+			Value: "nostr-events", // 默认值
+		},
 		// &cli.StringFlag{
 		// 	Name:  "dburl",
 		// 	Usage: "URL of the database to use",
@@ -56,9 +61,9 @@ var serve = &cli.Command{
 
 		// dbUrl := c.String("dburl")
 		// etcdUrl := c.String("etcdurl")
-
+		dbName := c.String("db-name")
 		// 初始化数据库
-		if err := orbitdb.Init(); err != nil {
+		if err := orbitdb.Init(dbName); err != nil {
 			return fmt.Errorf("初始化数据库失败: %w", err)
 		}
 		defer orbitdb.Close()
