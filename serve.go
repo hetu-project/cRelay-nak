@@ -6,7 +6,8 @@ import (
 	"fmt"
 
 	//"math"
-	//"os"
+	"os"
+	"path/filepath"
 	"time"
 
 	"github.com/bep/debounce"
@@ -47,6 +48,11 @@ var serve = &cli.Command{
 			Usage: "OrbitDB database name to use",
 			Value: "nostr-events", // 默认值
 		},
+		&cli.StringFlag{
+			Name:  "orbitdb-dir",
+			Usage: "OrbitDB storage directory path",
+			Value: filepath.Join(os.Getenv("HOME"), "data", "orbitdb"), // 默认值
+		},
 		// &cli.StringFlag{
 		// 	Name:  "dburl",
 		// 	Usage: "URL of the database to use",
@@ -62,8 +68,9 @@ var serve = &cli.Command{
 		// dbUrl := c.String("dburl")
 		// etcdUrl := c.String("etcdurl")
 		dbName := c.String("db-name")
+		orbitDBDir := c.String("orbitdb-dir")
 		// 初始化数据库
-		if err := orbitdb.Init(dbName); err != nil {
+		if err := orbitdb.Init(dbName, orbitDBDir); err != nil {
 			return fmt.Errorf("初始化数据库失败: %w", err)
 		}
 		defer orbitdb.Close()
